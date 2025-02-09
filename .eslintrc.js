@@ -15,7 +15,15 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   plugins: ['@typescript-eslint', 'react'],
   rules: {},
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
 }
