@@ -1,8 +1,13 @@
 import React from 'react'
+import type { MouseEvent } from 'react'
 import logo from './logo.svg'
 import './App.css'
 
 function App() {
+  function fn(event: MouseEvent<HTMLButtonElement>, name: string) {
+    console.log('click', name)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -10,6 +15,15 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <div>
+          <button
+            onClick={event => {
+              fn(event, 'hahah')
+            }}
+          >
+            click
+          </button>
+        </div>
         <a
           className="App-link"
           href="https://reactjs.org"
