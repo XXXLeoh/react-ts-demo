@@ -1,39 +1,11 @@
 import React from 'react'
-import type { MouseEvent } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import List1 from './List1.tsx'
 
 function App() {
-  function fn(event: MouseEvent<HTMLButtonElement>, name: string) {
-    console.log('click', name)
-  }
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <div>
-          <button
-            onClick={event => {
-              fn(event, 'hahah')
-            }}
-          >
-            click
-          </button>
-        </div>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <List1></List1>
+    </>
   )
 }
 
